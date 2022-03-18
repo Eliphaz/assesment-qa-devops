@@ -7,6 +7,7 @@ const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 
 beforeEach(async () => {
     driver.get('http://localhost:3000/')
+    driver.sleep(1000)
 })
 
 afterAll(async () => {
@@ -32,7 +33,7 @@ test('clicking draw button displays bot choices', async ()=>{
 test('clicking bot displays bot duo', async ()=>{
     driver.findElement(By.id('draw')).click()
     driver.sleep(1000)
-    driver.findElement(By.className('bot-btn')).click()
+    driver.findElement(By.className('bot-btn'[1])).click()
     const playerDuo = await driver.findElement(By.id('player-duo'))
     driver.sleep(5000)
     expect(await playerDuo.isDisplayed()).toBe(true)

@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "jest": {
-    "testEnvironment": "node",
-    "testTimeout": 30000
-  },
   "scripts": {
     "test": "jest"
   },
@@ -21,6 +17,7 @@
     "geckodriver": "^2.0.4",
     "jest": "^27.3.1",
     "rollbar": "^2.24.1",
+    "selenium": "^2.20.0",
     "selenium-webdriver": "^4.0.0",
     "ts-jest": "^27.0.7",
     "ts-node": "^10.4.0",
